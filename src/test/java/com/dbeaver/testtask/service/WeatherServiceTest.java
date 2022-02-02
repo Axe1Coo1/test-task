@@ -23,5 +23,10 @@ public class WeatherServiceTest {
             assertFalse(connection.isClosed());
         }
     }
+
+    @Test
+    public void shouldGetCurrentDate(){
+        assertTrue(weatherService.getCurrentDate().matches("\\d{4}.\\d{2}.\\d{2}"));
+    }
 }
 
